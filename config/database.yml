@@ -1,2 +1,0 @@
-pg:
-  database: postgres://pineauth:@localhost:5432/pineauth

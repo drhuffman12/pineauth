@@ -12,9 +12,9 @@ services:
     links:
       - db
     volumes:
-      - .:/app
-      - nodes:/app/node_modules
-      # - shards:/app/lib
+    - .:/app
+    - nodes:/app/node_modules
+    - shards:/app/lib
 
   migrate:
     build: .

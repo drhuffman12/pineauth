@@ -1,6 +1,6 @@
-secret_key_base: V6a-vri4fwdtq3FUW04jV9MfH5xU4w71CKIANYtMd5E
+secret_key_base: 8zDz86Bp9wcq9Ogtn7raop6munzy_lojKAn69Zd-MgE
 port: 3000
-name: Pineauth
+name: pineauth
 logging:
   severity: debug
   colorize: true
@@ -15,14 +15,22 @@ logging:
     - headers
     - cookies
     - params
+
 host: 0.0.0.0
 port_reuse: false
 process_count: 1
+# ssl_key_file:
+# ssl_cert_file:
 redis_url: "redis://localhost:6379"
-database_url: postgres://pineauth:@localhost:5432/pineauth_test
+database_url: postgres://postgres:@localhost:5432/pineauth_test
 session:
   key: amber.session
-  store: :signed_cookie
+  store: signed_cookie
   expires: 0
+smtp:
+  enabled: false
+
 secrets:
   description: Store your development secrets credentials and settings here.
+
+

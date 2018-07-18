@@ -1,55 +1,50 @@
 # pineauth
 
-[![Amber Framework](https://img.shields.io/badge/using-amber%20framework-orange.svg)](https://github.com/c910335/pineauth)
+[![Amber Framework](https://img.shields.io/badge/using-amber_framework-orange.svg)](https://amberframework.org)
 
-OAuth 2 Provider built with [Amber](https://github.com/amberframework/amber)
+This is a project written using [Amber](https://amberframework.org). Enjoy!
 
-## Installation
+## Getting Started
 
-Create a pg database called `pineauth_development` and configure the
-`config/database.yml` to provide the credentials to access the table.
+These instructions will get a copy of this project running on your machine for development and testing purposes.
 
-Then:
+Please see [deployment](https://docs.amberframework.org/amber/deployment) for notes on deploying the project in production.
 
-```shellsession
-$ shards update
-$ amber migrate up
+## Prerequisites
+
+This project requires [Crystal](https://crystal-lang.org/) ([installation guide](https://crystal-lang.org/docs/installation/)).
+
+## Development
+
+To start your Amber server:
+
+1. Install dependencies with `shards install`
+2. Build executables with `shards build`
+3. Create and migrate your database with `bin/amber db create migrate`. Also see [creating the database](https://docs.amberframework.org/amber/guides/create-new-app#creating-the-database).
+4. Start Amber server with `bin/amber watch`
+
+Now you can visit http://localhost:3000/ from your browser.
+
+Getting an error message you need help decoding? Check the [Amber troubleshooting guide](https://docs.amberframework.org/amber/troubleshooting), post a [tagged message on Stack Overflow](https://stackoverflow.com/questions/tagged/amber-framework), or visit [Amber on Gitter](https://gitter.im/amberframework/amber).
+
+Using Docker? Please check [Amber Docker guides](https://docs.amberframework.org/amber/guides/docker).
+
+## Tests
+
+To run the test suite:
+
 ```
-
-## Usage
-
-To run the demo:
-
-```shellsession
-$ crystal build src/pineauth.cr
-$ ./pineauth
+crystal spec
 ```
-
-## Docker Compose
-
-This will start an instance of postgres, migrate the database,
-and launch the site at http://localhost:3000
-
-```shellsession
-$ docker-compose up -d
-```
-
-To view the logs:
-
-```shellsession
-$ docker-compose logs -f
-```
-
-Note: The Docker images are compatible with Heroku.
 
 ## Contributing
 
-1. Fork it ( https://github.com/c910335/pineauth/fork )
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
+1. Fork it ( https://github.com/your-github-user/pineauth/fork )
+2. Create your feature branch ( `git checkout -b my-new-feature` )
+3. Commit your changes ( `git commit -am 'Add some feature'` )
+4. Push to the branch ( `git push origin my-new-feature` )
 5. Create a new Pull Request
 
 ## Contributors
 
-- [c910335](https://github.com/c910335) Tatsujin Chin - creator, maintainer
+- [your-github-user](https://github.com/your-github-user) Daniel Huffman - creator, maintainer

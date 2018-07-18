@@ -1,27 +1,12 @@
-# macOS
-.DS_Store
-
-# Crystal
-/docs/
-/libs/
+/doc/
 /lib/
 /.crystal/
 /.shards/
+/.vscode/
+/tmp/
 .env
-
-# Vim
-[._]*.s[a-v][a-z]
-[._]*.sw[a-p]
-[._]s[a-v][a-z]
-[._]sw[a-p]
-
-# Node
-/node_modules
-
-# Amber
-/bin
 .encryption_key
 production.yml
-
-# Pineauth
-/pineauth
+.DS_Store
+/bin/
+/node_modules

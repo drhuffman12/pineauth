@@ -76,35 +76,42 @@ h6, .h6 {
   padding-top: 20px;
 }
 
-.navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
+#logo {
+  background-color: $background-color;
+  background-image: url("../images/logo.png");
+  background-size:contain;
+  width: 200px;
+  height:278px;
 }
 
-.btn-dm {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  color: #333;
-  white-space: nowrap;
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  border-radius: 0;
+/* Hide logo in small screens */
+@media (max-width: 767px) {
+  #logo {
+    display: none;
+  }
 }
 
-.btn-dm:hover {
-  color: #262626;
-  text-decoration: none;
-  background-color: #f5f5f5;
+.table td, .table th {
+  vertical-align: middle;
 }
 
-.inline-form {
-  display: inline-block;
+.alert {
+  margin-top: 1em;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
-#sign_out {
-  margin: 0;
+// For Navigation pulling right
+.nav-item-auth {
+  &.nav-item-auth-signout, &.nav-item-auth-signup {
+    order: 9999;
+  }
+
+  &.nav-item-auth-profile, &.nav-item-auth-signin {
+    order: 9990;
+    margin-left: auto;
+  }
 }

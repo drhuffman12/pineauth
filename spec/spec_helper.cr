@@ -1,7 +1,16 @@
+ENV["AMBER_ENV"] ||= "test"
+
 require "spec"
-require "amber"
-require "../src/helpers/**"
-require "../src/controllers/**"
-require "../src/mailers/**"
-require "../src/models/**"
+require "micrate"
+require "garnet_spec"
+
 require "../config/*"
+
+Micrate::DB.connection_url = Amber.settings.database_url
+
+# Automatically run migrations on the test database
+Micrate::Cli.run_up
+
+# Disable Granite logs in tests
+Granite.settings.logger = Logger.new nil
+
